@@ -6,7 +6,7 @@ with open('model.pkl','rb') as f:
     model = pickle.load(f)
 st.title('SONAR DATA CLASSIFICATION')
 #list comprehension
-collect_numbers = lambda x : [float(i) for i in re.split(",", x)]
+collect_numbers = lambda x : [float(i) for i in re.split(",", x) if i!=""]
 #getting input
 input_data = st.text_input("Enter the input data separated by commas")
 num_list = []
